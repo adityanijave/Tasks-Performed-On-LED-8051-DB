@@ -1,0 +1,58 @@
+C51 COMPILER V9.59.0.0   BLINK_LED                                                         11/13/2023 10:52:30 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE BLINK_LED
+OBJECT MODULE PLACED IN .\Objects\Blink_LED.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Blink_LED.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\Blink_LED.lst) TABS(2) OBJECT(.\Objects\Blink_LED.obj)
+
+line level    source
+
+   1          #include<reg51.h>                                 //including required lib's
+   2          
+   3          sbit sw = P1^5;                                   //switch is aat a port pin 
+   4          
+   5          void delay(unsigned int);                         //forworad decleration of delay function with one paraeter
+   6          
+   7          void main()                                       //main function
+   8          {
+   9   1        P2 = 0x00;                                      //P2 = 00000000 (all pins are active low)
+  10   1        
+  11   1        while(1)                                        //forever loop (or we can also use for(;;))
+  12   1        {
+  13   2          if(sw == 0)                                   //if (conditional statement), if sw is active low then,
+  14   2          {
+  15   3            P2 = 0xFF;                                  //P2 = 11111111 (all 8 pins are active high)
+  16   3            delay(25);                                    //calling delay function with parameter
+  17   3            P2 = 0x00;                                  //P2 = 00000000 (all 8 pins are active low)
+  18   3            delay(25);                                   //calling delay function with parameter
+  19   3          }
+  20   2          else  if(sw == 1)                             //if sw is active high then,                                      
+  21   2          {
+  22   3            P2 = 0x00;                                  //P2 = 00000000 (all 8 pins are active low)
+  23   3          }
+  24   2        }
+  25   1      }
+  26          
+  27          void delay(unsigned int time)                     //defination of delay function with one parameter
+  28          {
+  29   1        unsigned int i,j;                               //decleration of variables
+  30   1        for(i = 0; i < time; i++)                       //for loop
+  31   1        {
+  32   2          for(j = 0; j<1000; j++);                      //nested for loop
+  33   2        }
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,55 @@
+C51 COMPILER V9.59.0.0   BLINK_ODD_LEDS                                                    11/13/2023 11:59:21 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE BLINK_ODD_LEDS
+OBJECT MODULE PLACED IN .\Objects\Blink_Odd_LEDs.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Blink_Odd_LEDs.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\Blink_Odd_LEDs.lst) TABS(2) OBJECT(.\Objects\Blink_Odd_LEDs.obj)
+
+line level    source
+
+   1           #include<reg51.h>                                                //including required lib's
+   2          
+   3          void delay(unsigned int);                                         //forward decleration of delay function with one parameter
+   4          void main()                                                       //main function
+   5          {
+   6   1          P1 = 0x00;                                                  
+   7   1          delay(60);                                                    //calling delay function with one parameter
+   8   1          while(1)
+   9   1          {
+  10   2            P1 = 0x01;                                                  //LED 1
+  11   2            delay(60);                                                  //calling delay function with one parameter
+  12   2            
+  13   2            P1 = 0x04;                                                  //LED 3
+  14   2            delay(60);                                                  //calling delay function with one parameter
+  15   2            
+  16   2            P1 = 0x10;                                                  //LED 5
+  17   2            delay(60);                                                  //calling delay function with one parameter
+  18   2            
+  19   2            P1 = 0x40;                                                  //LED 7
+  20   2            delay(60);                                                  //calling delay function with one parameter
+  21   2          }
+  22   1      }
+  23            
+  24          void delay(unsigned int time)                                     //defination of dealy() function with one parameter
+  25          {
+  26   1        unsigned int i,j;                                               //decleration of variables
+  27   1        for(i = 0; i < time; i ++)                                      //for loop
+  28   1        {
+  29   2          for(j = 0; j < 1000; j++);                                    //nested for loop
+  30   2        }
+  31   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     71    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

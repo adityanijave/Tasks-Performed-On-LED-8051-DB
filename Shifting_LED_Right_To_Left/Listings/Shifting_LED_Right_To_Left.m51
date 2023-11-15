@@ -1,0 +1,144 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/15/2023  12:23:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Shifting_LED_Right_To_Left.obj TO .\Objects\Shifting_LED_Ri
+>> ght_To_Left PRINT (.\Listings\Shifting_LED_Right_To_Left.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\Shifting_LED_Right_To_Left.obj (SHIFTING_LED_RIGHT_TO_LEFT)
+
+
+LINK MAP OF MODULE:  .\Objects\Shifting_LED_Right_To_Left (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0093H     UNIT         ?PR?MAIN?SHIFTING_LED_RIGHT_TO_LEFT
+            CODE    0893H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Shifting_LED_Right_To_Left (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SHIFTING_LED_RIGHT_TO_LEFT
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Shifting_LED_Right_To_Left (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0893H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/15/2023  12:23:10  PAGE 2
+
+
+  C:0896H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0893H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0893H         LINE#         133
+  C:0895H         LINE#         134
+  C:0896H         LINE#         135
+  C:0897H         LINE#         136
+  C:0899H         LINE#         185
+  C:089CH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        SHIFTING_LED_RIGHT_TO_LEFT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        number
+  -------         ENDDO         
+  C:0800H         LINE#         5
+  C:0800H         LINE#         6
+  C:0800H         LINE#         10
+  C:0803H         LINE#         12
+  C:0803H         LINE#         13
+  C:0803H         LINE#         14
+  C:0806H         LINE#         15
+  C:0809H         LINE#         16
+  C:0809H         LINE#         18
+  C:0814H         LINE#         19
+  C:0817H         LINE#         20
+  C:081AH         LINE#         21
+  C:081AH         LINE#         23
+  C:0825H         LINE#         24
+  C:0828H         LINE#         25
+  C:082BH         LINE#         26
+  C:082BH         LINE#         28
+  C:0836H         LINE#         29
+  C:0839H         LINE#         30
+  C:083CH         LINE#         31
+  C:083CH         LINE#         33
+  C:0847H         LINE#         34
+  C:084AH         LINE#         35
+  C:084DH         LINE#         36
+  C:084DH         LINE#         38
+  C:0858H         LINE#         39
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/15/2023  12:23:10  PAGE 3
+
+
+  C:085BH         LINE#         40
+  C:085EH         LINE#         41
+  C:085EH         LINE#         43
+  C:0869H         LINE#         44
+  C:086CH         LINE#         45
+  C:086FH         LINE#         46
+  C:086FH         LINE#         48
+  C:087AH         LINE#         49
+  C:087DH         LINE#         50
+  C:088CH         LINE#         51
+  C:088CH         LINE#         53
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SHIFTING_LED_RIGHT_TO_LEFT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00A2H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=162
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

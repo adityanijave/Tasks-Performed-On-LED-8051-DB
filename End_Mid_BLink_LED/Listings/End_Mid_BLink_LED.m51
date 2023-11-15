@@ -1,0 +1,290 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/13/2023  12:26:17  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\End_Mid_BLink_LED.obj TO .\Objects\End_Mid_BLink_LED PRINT 
+>> (.\Listings\End_Mid_BLink_LED.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\End_Mid_BLink_LED.obj (END_MID_BLINK_LED)
+
+
+LINK MAP OF MODULE:  .\Objects\End_Mid_BLink_LED (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0020H     UNIT         ?PR?_DELAY?END_MID_BLINK_LED
+            CODE    0820H     000DH     UNIT         ?PR?L18B45?END_MID_BLINK_LED
+            CODE    082DH     000DH     UNIT         ?PR?L27B18?END_MID_BLINK_LED
+            CODE    083AH     000DH     UNIT         ?PR?L36B27?END_MID_BLINK_LED
+            CODE    0847H     000DH     UNIT         ?PR?L45B36?END_MID_BLINK_LED
+            CODE    0854H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0860H     000CH     UNIT         ?PR?L18B45L27B18L36B27L45B36?END_MID_BLINK_LED
+            CODE    086CH     0008H     UNIT         ?PR?MAIN?END_MID_BLINK_LED
+            CODE    0874H     0005H     UNIT         ?PR?LIGHT18?END_MID_BLINK_LED
+            CODE    0879H     0005H     UNIT         ?PR?BLACK18?END_MID_BLINK_LED
+            CODE    087EH     0005H     UNIT         ?PR?LIGHT27?END_MID_BLINK_LED
+            CODE    0883H     0005H     UNIT         ?PR?BLACK27?END_MID_BLINK_LED
+            CODE    0888H     0005H     UNIT         ?PR?LIGHT36?END_MID_BLINK_LED
+            CODE    088DH     0005H     UNIT         ?PR?BLACK36?END_MID_BLINK_LED
+            CODE    0892H     0005H     UNIT         ?PR?LIGHT45?END_MID_BLINK_LED
+            CODE    0897H     0005H     UNIT         ?PR?BLACK45?END_MID_BLINK_LED
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\End_Mid_BLink_LED (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?END_MID_BLINK_LED
+
+?PR?MAIN?END_MID_BLINK_LED
+  +--> ?PR?L18B45L27B18L36B27L45B36?END_MID_...
+
+?PR?L18B45L27B18L36B27L45B36?END_MID_...
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/13/2023  12:26:17  PAGE 2
+
+
+  +--> ?PR?L18B45?END_MID_BLINK_LED
+  +--> ?PR?L27B18?END_MID_BLINK_LED
+  +--> ?PR?L36B27?END_MID_BLINK_LED
+  +--> ?PR?L45B36?END_MID_BLINK_LED
+
+?PR?L18B45?END_MID_BLINK_LED
+  +--> ?PR?LIGHT18?END_MID_BLINK_LED
+  +--> ?PR?BLACK45?END_MID_BLINK_LED
+  +--> ?PR?_DELAY?END_MID_BLINK_LED
+
+?PR?L27B18?END_MID_BLINK_LED
+  +--> ?PR?LIGHT27?END_MID_BLINK_LED
+  +--> ?PR?BLACK18?END_MID_BLINK_LED
+  +--> ?PR?_DELAY?END_MID_BLINK_LED
+
+?PR?L36B27?END_MID_BLINK_LED
+  +--> ?PR?LIGHT36?END_MID_BLINK_LED
+  +--> ?PR?BLACK27?END_MID_BLINK_LED
+  +--> ?PR?_DELAY?END_MID_BLINK_LED
+
+?PR?L45B36?END_MID_BLINK_LED
+  +--> ?PR?LIGHT45?END_MID_BLINK_LED
+  +--> ?PR?BLACK36?END_MID_BLINK_LED
+  +--> ?PR?_DELAY?END_MID_BLINK_LED
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\End_Mid_BLink_LED (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0854H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0857H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0854H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/13/2023  12:26:17  PAGE 3
+
+
+  C:0000H         LINE#         126
+  C:0854H         LINE#         133
+  C:0856H         LINE#         134
+  C:0857H         LINE#         135
+  C:0858H         LINE#         136
+  C:085AH         LINE#         185
+  C:085DH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        END_MID_BLINK_LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0090H.2       PUBLIC        L3
+  B:0090H.3       PUBLIC        L4
+  B:0090H.4       PUBLIC        L5
+  D:0090H         PUBLIC        P1
+  B:0090H.5       PUBLIC        L6
+  B:0090H.6       PUBLIC        L7
+  B:0090H.7       PUBLIC        L8
+  C:0892H         PUBLIC        light45
+  C:0888H         PUBLIC        light36
+  C:087EH         PUBLIC        light27
+  C:0874H         PUBLIC        light18
+  C:0860H         PUBLIC        L18B45L27B18L36B27L45B36
+  C:0800H         PUBLIC        _delay
+  C:086CH         PUBLIC        main
+  C:0847H         PUBLIC        L45B36
+  C:083AH         PUBLIC        L36B27
+  C:082DH         PUBLIC        L27B18
+  C:0820H         PUBLIC        L18B45
+  C:0897H         PUBLIC        black45
+  C:088DH         PUBLIC        black36
+  C:0883H         PUBLIC        black27
+  C:0879H         PUBLIC        black18
+  B:0090H.0       PUBLIC        L1
+  B:0090H.1       PUBLIC        L2
+  -------         PROC          MAIN
+  C:086CH         LINE#         35
+  C:086CH         LINE#         36
+  C:086CH         LINE#         37
+  C:086FH         LINE#         38
+  C:086FH         LINE#         39
+  C:086FH         LINE#         40
+  C:0872H         LINE#         41
+  -------         ENDPROC       MAIN
+  -------         PROC          LIGHT18
+  C:0874H         LINE#         46
+  C:0874H         LINE#         47
+  C:0874H         LINE#         48
+  C:0876H         LINE#         49
+  C:0878H         LINE#         50
+  -------         ENDPROC       LIGHT18
+  -------         PROC          BLACK18
+  C:0879H         LINE#         52
+  C:0879H         LINE#         53
+  C:0879H         LINE#         54
+  C:087BH         LINE#         55
+  C:087DH         LINE#         56
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/13/2023  12:26:17  PAGE 4
+
+
+  -------         ENDPROC       BLACK18
+  -------         PROC          LIGHT27
+  C:087EH         LINE#         58
+  C:087EH         LINE#         59
+  C:087EH         LINE#         60
+  C:0880H         LINE#         61
+  C:0882H         LINE#         62
+  -------         ENDPROC       LIGHT27
+  -------         PROC          BLACK27
+  C:0883H         LINE#         64
+  C:0883H         LINE#         65
+  C:0883H         LINE#         66
+  C:0885H         LINE#         67
+  C:0887H         LINE#         68
+  -------         ENDPROC       BLACK27
+  -------         PROC          LIGHT36
+  C:0888H         LINE#         70
+  C:0888H         LINE#         71
+  C:0888H         LINE#         72
+  C:088AH         LINE#         73
+  C:088CH         LINE#         74
+  -------         ENDPROC       LIGHT36
+  -------         PROC          BLACK36
+  C:088DH         LINE#         76
+  C:088DH         LINE#         77
+  C:088DH         LINE#         78
+  C:088FH         LINE#         79
+  C:0891H         LINE#         80
+  -------         ENDPROC       BLACK36
+  -------         PROC          LIGHT45
+  C:0892H         LINE#         82
+  C:0892H         LINE#         83
+  C:0892H         LINE#         84
+  C:0894H         LINE#         85
+  C:0896H         LINE#         86
+  -------         ENDPROC       LIGHT45
+  -------         PROC          BLACK45
+  C:0897H         LINE#         88
+  C:0897H         LINE#         89
+  C:0897H         LINE#         90
+  C:0899H         LINE#         91
+  C:089BH         LINE#         92
+  -------         ENDPROC       BLACK45
+  -------         PROC          L18B45
+  C:0820H         LINE#         94
+  C:0820H         LINE#         95
+  C:0820H         LINE#         96
+  C:0823H         LINE#         97
+  C:0826H         LINE#         98
+  -------         ENDPROC       L18B45
+  -------         PROC          L27B18
+  C:082DH         LINE#         101
+  C:082DH         LINE#         102
+  C:082DH         LINE#         104
+  C:0830H         LINE#         105
+  C:0833H         LINE#         106
+  -------         ENDPROC       L27B18
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/13/2023  12:26:17  PAGE 5
+
+
+  -------         PROC          L36B27
+  C:083AH         LINE#         109
+  C:083AH         LINE#         110
+  C:083AH         LINE#         111
+  C:083DH         LINE#         112
+  C:0840H         LINE#         113
+  -------         ENDPROC       L36B27
+  -------         PROC          L45B36
+  C:0847H         LINE#         116
+  C:0847H         LINE#         117
+  C:0847H         LINE#         118
+  C:084AH         LINE#         119
+  C:084DH         LINE#         120
+  -------         ENDPROC       L45B36
+  -------         PROC          L18B45L27B18L36B27L45B36
+  C:0860H         LINE#         123
+  C:0860H         LINE#         124
+  C:0860H         LINE#         125
+  C:0863H         LINE#         126
+  C:0866H         LINE#         127
+  C:0869H         LINE#         128
+  -------         ENDPROC       L18B45L27B18L36B27L45B36
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        time
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         131
+  C:0800H         LINE#         132
+  C:0800H         LINE#         133
+  C:0800H         LINE#         135
+  C:080AH         LINE#         136
+  C:080AH         LINE#         137
+  C:0818H         LINE#         138
+  C:081FH         LINE#         139
+  C:081FH         LINE#         140
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        END_MID_BLINK_LED
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009FH BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=159
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

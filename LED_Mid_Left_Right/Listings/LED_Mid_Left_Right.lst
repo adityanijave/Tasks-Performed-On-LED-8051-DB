@@ -1,0 +1,103 @@
+C51 COMPILER V9.59.0.0   LED_MID_LEFT_RIGHT                                                11/15/2023 09:38:16 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE LED_MID_LEFT_RIGHT
+OBJECT MODULE PLACED IN .\Objects\LED_Mid_Left_Right.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE LED_Mid_Left_Right.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.
+                    -\Listings\LED_Mid_Left_Right.lst) TABS(2) OBJECT(.\Objects\LED_Mid_Left_Right.obj)
+
+line level    source
+
+   1          #include <REGX51.H>                     //including required lib's
+   2          
+   3          //sbit declerations
+   4          sbit L1 = P2^0;                         //LED 1 at PIN 0 of port
+   5          sbit L2 = P2^1;                         //LED 2 at PIN 1 of port
+   6          sbit L3 = P2^2;                         //LED 3 at PIN 2 of port
+   7          sbit L4 = P2^3;                         //LED 4 at PIN 3 of port
+   8          sbit L5 = P2^4;                         //LED 5 at PIN 4 of port
+   9          sbit L6 = P2^5;                         //LED 6 at PIN 5 of port
+  10          sbit L7 = P2^6;                         //LED 7 at PIN 6 of port
+  11          sbit L8 = P2^7;                         //LED 8 at PIN 7 of port
+  12          
+  13          sbit sw = P1^0;                         //Switch at pin port another port
+  14          
+  15          //forward decleration of user defined functions
+  16          void delay(unsigned int);               //delay function with one parameter
+  17          
+  18          void main()                             //main function
+  19          {
+  20   1        P2 = 0x00;                            //all pins are low at start 
+  21   1        
+  22   1        while(1)                              //forever loop (or we can use for(;;))
+  23   1        {
+  24   2          if(sw == 0)                         //if sw is active low then,
+  25   2          {
+  26   3            delay(5);                         //calling delay function
+  27   3            
+  28   3            L5 = 1;                           //turn on the LED
+  29   3            delay(500);                       //calling delay function
+  30   3            
+  31   3            L6 = 1;                           //turn on the LED
+  32   3            delay(500);                       //calling delay function
+  33   3            
+  34   3            L7 = 1;                           //turn on the LED
+  35   3            delay(500);                       //calling delay function
+  36   3            
+  37   3            L8 = 1;                           //turn on the LED
+  38   3            delay(500);                       //calling delay function
+  39   3            
+  40   3            L4 = 1;                           //turn on the LED
+  41   3            delay(500);                       //calling delay function
+  42   3            
+  43   3            L3 = 1;                           //turn on the LED
+  44   3            delay(500);                       //calling delay function
+  45   3            
+  46   3            L2 = 1;                           //turn on the LED
+  47   3            delay(500);                       //calling delay function
+  48   3            
+  49   3            L1 = 1;                           //turn on the LED
+  50   3            delay(500);                       //calling delay function
+  51   3          }
+  52   2          else                                //else then,
+  53   2          {
+  54   3            //turn off all LEDs 
+C51 COMPILER V9.59.0.0   LED_MID_LEFT_RIGHT                                                11/15/2023 09:38:16 PAGE 2   
+
+  55   3            L1 = 0;
+  56   3            L2 = 0; 
+  57   3            L3 = 0; 
+  58   3            L4 = 0; 
+  59   3            L5 = 0; 
+  60   3            L6 = 0; 
+  61   3            L7 = 0; 
+  62   3            L8 = 0;
+  63   3          }
+  64   2        }
+  65   1      }
+  66          
+  67          
+  68          //function defination
+  69          
+  70          void delay(unsigned int time)
+  71          {
+  72   1        unsigned int i,j;                       //decleration of variables
+  73   1        for(i = 0; i < time; i++)               //for loop
+  74   1        {
+  75   2          for(j = 0; j < 1000; j++);              //nested for loop
+  76   2        }
+  77   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    109    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

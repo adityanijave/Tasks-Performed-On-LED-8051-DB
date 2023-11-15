@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\One_Switch_Alternating_Blinking_Shifting_LED_Both_Dir.obj" 
+TO ".\Objects\One_Switch_Alternating_Blinking_Shifting_LED_Both_Dir" 
+PRINT(".\Listings\One_Switch_Alternating_Blinking_Shifting_LED_Both_Dir.m51")

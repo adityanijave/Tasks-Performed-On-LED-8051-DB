@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\Shifting_LED_Left_To_Right.obj" 
+TO ".\Objects\Shifting_LED_Left_To_Right" 
+PRINT(".\Listings\Shifting_LED_Left_To_Right.m51")

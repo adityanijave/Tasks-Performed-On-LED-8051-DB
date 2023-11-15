@@ -1,0 +1,46 @@
+C51 COMPILER V9.59.0.0   BLINK_EVEN_LEDS                                                   11/13/2023 09:32:36 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE BLINK_EVEN_LEDS
+OBJECT MODULE PLACED IN .\Objects\Blink_Even_LEDs.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Blink_Even_LEDs.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\Blink_Even_LEDs.lst) TABS(2) OBJECT(.\Objects\Blink_Even_LEDs.obj)
+
+line level    source
+
+   1          #include<reg51.h>                                             //including required lib's
+   2          
+   3          void main()                                                   //main function
+   4          {
+   5   1        unsigned int count;                                         //decleration of variables
+   6   1        P1 = 0x00;                                                  //initialization of port with 00000000
+   7   1        for(count = 0; count <= 40000; count++);                    //delay using for loop
+   8   1        while(1)                                                    //forever loop (or we can us for(;;))
+   9   1        {
+  10   2          P1 = 0x02;                                                //P1 = 00000010
+  11   2          for(count = 0; count <= 40000; count++);                  //delay using for loop
+  12   2          
+  13   2          P1 = 0x08;                                                //P1 = 00001000
+  14   2          for(count = 0; count <= 40000; count++);                  //delay using for loop
+  15   2          
+  16   2          P1 = 0x20;                                                //P1 = 00100000
+  17   2          for(count = 0; count <= 40000; count++);                  //delay using for loop
+  18   2          
+  19   2          P1 = 0x80;                                                //P1 = 10000000
+  20   2          for(count = 0; count <= 40000; count++);                  //delay using for loop
+  21   2        }
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    149    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

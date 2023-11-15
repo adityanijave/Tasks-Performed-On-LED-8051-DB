@@ -1,0 +1,81 @@
+C51 COMPILER V9.59.0.0   SHIFTING_LED_RIGHT_TO_LEFT                                        11/15/2023 12:23:10 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE SHIFTING_LED_RIGHT_TO_LEFT
+OBJECT MODULE PLACED IN .\Objects\Shifting_LED_Right_To_Left.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Shifting_LED_Right_To_Left.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND
+                    - PRINT(.\Listings\Shifting_LED_Right_To_Left.lst) TABS(2) OBJECT(.\Objects\Shifting_LED_Right_To_Left.obj)
+
+line level    source
+
+   1          //including required lib's
+   2          #include<reg51.h>
+   3          
+   4          //main functions
+   5          void main()
+   6          {
+   7   1        //declerations of variables (local variables)
+   8   1        unsigned int number;
+   9   1        
+  10   1        P2 = 0x00;
+  11   1        
+  12   1        while (1)                                                                   //forever loop (or we can use for(;;))
+  13   1        {
+  14   2          P2 = 0x01;                                                                // LED 1
+  15   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  16   2          {
+  17   3          
+  18   3          }
+  19   2          P2 = 0x02;                                                                // LED 2
+  20   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  21   2          {
+  22   3          
+  23   3          }
+  24   2          P2 = 0x04;                                                                // LED 3
+  25   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  26   2          {
+  27   3          
+  28   3          }
+  29   2          P2 = 0x08;                                                                // LED 4
+  30   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  31   2          {
+  32   3          
+  33   3          }
+  34   2          P2 = 0x10;                                                                // LED 5
+  35   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  36   2          {
+  37   3          
+  38   3          }
+  39   2          P2 = 0x20;                                                                // LED 6
+  40   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  41   2          {
+  42   3          
+  43   3          }
+  44   2          P2 = 0x40;                                                                // LED 7
+  45   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  46   2          {
+  47   3          
+  48   3          }
+  49   2          P2 = 0x80;                                                                // LED 8
+  50   2          for(number = 0; number <= 10000; number++)                                //delay using for loop
+  51   2          {
+  52   3          
+  53   3          }
+  54   2        }
+C51 COMPILER V9.59.0.0   SHIFTING_LED_RIGHT_TO_LEFT                                        11/15/2023 12:23:10 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    147    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

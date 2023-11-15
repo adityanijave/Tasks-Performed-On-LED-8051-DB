@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\One_Switch_LED_With_Not.obj" 
+TO ".\Objects\One_Switch_LED_With_Not" 
+PRINT(".\Listings\One_Switch_LED_With_Not.m51")

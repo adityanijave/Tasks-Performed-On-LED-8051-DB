@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\Switch_and_LED.obj" 
+TO ".\Objects\Switch_and_LED" 
+PRINT(".\Listings\Switch_and_LED.m51")

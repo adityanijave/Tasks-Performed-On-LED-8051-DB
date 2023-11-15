@@ -1,0 +1,61 @@
+C51 COMPILER V9.59.0.0   ONE_SWITCH_LED_WITH_NOT                                           11/15/2023 11:57:11 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE ONE_SWITCH_LED_WITH_NOT
+OBJECT MODULE PLACED IN .\Objects\One_Switch_LED_With_Not.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE One_Switch_LED_With_Not.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PR
+                    -INT(.\Listings\One_Switch_LED_With_Not.lst) TABS(2) OBJECT(.\Objects\One_Switch_LED_With_Not.obj)
+
+line level    source
+
+   1          //including required lib's
+   2          #include <REGX51.H>
+   3          
+   4          //sbit declerations
+   5          sbit sw = P1^0;                                               //sbit for switch
+   6          sbit Led = P1^7;                                              //sbit for LED
+   7          
+   8          //forward declearation of user defined functions
+   9          void delay(unsigned int);                                     //delay function with one parameter
+  10          
+  11          void main()                                                   //main function
+  12          {
+  13   1        //initialization
+  14   1        Led = 0;                                                    //LED is turn OFF (at start)
+  15   1        
+  16   1        while(1)                                                    //forever loop (or we can use for(;;))
+  17   1        {
+  18   2          if(sw == 0)                                               //if switch is active low then,
+  19   2          {
+  20   3            Led = ~Led;                                             //LED = 0, then negation of LED is 1 and it is assign to again LED, s
+             -o that LED = 1
+  21   3            delay(100);                                             //calling delay function with 100
+  22   3          }
+  23   2        }
+  24   1      }
+  25          
+  26          
+  27          //function defination of user defined functions
+  28          void delay(unsigned int time)                                 //delay function with one parameter called time
+  29          {
+  30   1        unsigned int i,j;                                           //decleration of variables
+  31   1        
+  32   1        for(i = 0; i < time; i++)                                   //for looop
+  33   1        {
+  34   2          for(j = 0; j < 1000; j++);                                //nested for looop
+  35   2        }
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     48    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
